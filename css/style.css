@@ -19,18 +19,18 @@
 }
 
 @font-face {
-    font-family: 'NeoSansIntel';
-    src: url('../fonts/NeoSansIntel.ttf');
+    font-family: 'NeoSansIntel-Medium';
+    src: url('../fonts/NeoSansIntel-Medium.ttf');
 }
 
 @font-face {
-    font-family: 'NeoSansIntel';
-    src: url('../fonts/NeoSansIntel.ttf');
+    font-family: 'NeoSansIntel-MediumItalic';
+    src: url('../fonts/NeoSansIntel-MediumItalic.ttf');
 }
 
 @font-face {
-    font-family: 'NeoSansIntel';
-    src: url('../fonts/NeoSansIntel.ttf');
+    font-family: 'NexaLight';
+    src: url('../fonts/NexaLight.otf');
 }
 
 body {
