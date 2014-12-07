@@ -34,17 +34,19 @@
 }
 
 body {
+	font-family: 'NeoSansIntel';
 	margin: 0;
 	padding: 0;
 	background: url('../img/bg.jpg');
 	background-size: cover;
+	color: #fff;
 }
 
 header {
 	text-align: center;
 }
 
-h3 {
+h2 {
 	margin; auto;
 	color: #fff;
 }
