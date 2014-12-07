@@ -86,3 +86,17 @@ h2 {
 .carousel-caption {
 	padding-bottom: 0px;
 }
+
+.thumb-list {
+	text-align: center;
+	list-style: none;
+}
+
+.thumb-list>li {
+	display: inline-block;
+}
+
+.thumb-list>ul>li>img {
+	width: 40px;
+	height: 40px;
+}
