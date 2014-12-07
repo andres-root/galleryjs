@@ -4,13 +4,13 @@
 }
 
 @font-face {
-    font-family: 'NeoSansIntel';
-    src: url('../fonts/NeoSansIntel.ttf');
+    font-family: 'NeoSansIntel-Italic';
+    src: url('../fonts/NeoSansIntel-Italic.ttf');
 }
 
 @font-face {
-    font-family: 'NeoSansIntel-Italic';
-    src: url('../fonts/NeoSansIntel-Italic.ttf');
+    font-family: 'NeoSansIntel-Light';
+    src: url('../fonts/NeoSansIntel-Light.ttf');
 }
 
 @font-face {
