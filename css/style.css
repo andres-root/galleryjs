@@ -1,12 +1,23 @@
 body {
 	margin: 0;
 	padding: 0;
+	background: url('../img/bg.jpg');
+	background-size: cover;
+}
+
+header {
+	text-align: center;
+}
+
+h3 {
+	margin; auto;
+	color: #fff;
 }
 
 .gallery {
-	background-image: url('../img/image_2.jpg');
+/*	background-image: url('../img/image_2.jpg');
 	background-size: cover;
-	background-position: 100%;
+	background-position: 100%;*/
 	height: 500px;
 }
 
@@ -16,7 +27,9 @@ body {
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
 	margin: auto;
-	border: 1px solid #fff;
+	outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 5px #9ecaed;
 }
 
 .carousel-control, .carousel-control.left, .carousel-control.right {
@@ -28,6 +41,11 @@ body {
 .carousel-inner>.item {
 	height: 500px;
 }
+
+.carousel-inner {
+	margin-top: 10px;
+}
+
 .carousel-caption {
 	padding-bottom: 0px;
 }
