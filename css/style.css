@@ -87,7 +87,11 @@ h2 {
 	padding-bottom: 0px;
 }
 
-.thumbs-container .carousel-indicators li {
+.carousel-indicators {
+	bottom: -60px;
+}
+
+.carousel-indicators li {
     border: medium none;
     border-radius: 0;
     height: 54px;
@@ -97,14 +101,20 @@ h2 {
     margin-right: 5px !important;
     margin-top: 0;
 }
-.thumbs-container .carousel-indicators img {
+.carousel-indicators img {
     float: left;
     height: 54px;
     width: 100px;
     left: 0;
 }
 
-.thumbs-container .carousel-indicators .active img {
+.carousel-indicators .active img {
     border: 2px solid #428BCA;
     opacity: 0.7;
+}
+
+.carousel-indicators .active {
+	height: 54px;
+    width: 100px;
+    margin: 5px auto;
 }
