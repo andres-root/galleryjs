@@ -8,17 +8,34 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript">
-		function xhrGet(url) {
-			var xhr = new XMLHttpRequest();
-			xhr.open("GET", url, true);
-			xhr.onload = function (data) {
-				var response = JSON.parse(data.responseText);
-			    console.log(response);
-			    alert(response);
-			}
-			xhr.send();
-		}
-		xhrGet('js/gallery.json');
+		var getJSON = function(url, successHandler, errorHandler) {
+		  var xhr = typeof XMLHttpRequest != 'undefined'
+		    ? new XMLHttpRequest()
+		    : new ActiveXObject('Microsoft.XMLHTTP');
+		  xhr.open('get', url, true);
+		  xhr.onreadystatechange = function() {
+		    var status;
+		    var data;
+		    // http://xhr.spec.whatwg.org/#dom-xmlhttprequest-readystate
+		    if (xhr.readyState == 4) { // `DONE`
+		      status = xhr.status;
+		      if (status == 200) {
+		        data = JSON.parse(xhr.responseText);
+		        successHandler && successHandler(data);
+		      } else {
+		        errorHandler && errorHandler(status);
+		      }
+		    }
+		  };
+		  xhr.send();
+		};
+
+		getJSON('js/gallery.json', function(data) {
+		  alert(data);
+		  console.log(data);
+		}, function(status) {
+		  alert('Something went wrong.');
+		});
 	</script>
 	</head>
 <body>
