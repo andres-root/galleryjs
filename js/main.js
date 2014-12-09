@@ -5,7 +5,8 @@ function xhrGet(reqUri, callback) {
 	xhr.send();
 }
 
-xhrGet('gallery_json.js', function (data) {
+function load (data) {
     var response = JSON.parse(data.responseText);
     console.log(response);
-});
+}
+xhrGet('gallery_json.js', load);
