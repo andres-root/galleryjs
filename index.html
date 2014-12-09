@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript">
-		var getJSON = function(url, successHandler, errorHandler) {
+		var xhrGet = function(url, successHandler, errorHandler) {
 		  var xhr = typeof XMLHttpRequest != 'undefined'
 		    ? new XMLHttpRequest()
 		    : new ActiveXObject('Microsoft.XMLHTTP');
@@ -16,7 +16,6 @@
 		  xhr.onreadystatechange = function() {
 		    var status;
 		    var data;
-		    // http://xhr.spec.whatwg.org/#dom-xmlhttprequest-readystate
 		    if (xhr.readyState == 4) { // `DONE`
 		      status = xhr.status;
 		      if (status == 200) {
@@ -30,7 +29,7 @@
 		  xhr.send();
 		};
 
-		getJSON('js/gallery.json', function(data) {
+		xhrGet('js/gallery.json', function(data) {
 		  alert(data);
 		  console.log(data);
 		}, function(status) {
