@@ -29,7 +29,7 @@ $(document).ready(function() {
 				var img = $('<img src="' + data[i].image + '">');
 				slide.append(img);
 				var caption = $('<div class="carousel-caption">');
-				caption.append('<h4>'+data[i].title+'</h4>');
+				caption.append('<h3>'+data[i].title+'</h3>');
 				caption.append('<p>'+data[i].date+'</p>');
 				slide.append(caption);
 				inner.append(slide);
