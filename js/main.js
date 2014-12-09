@@ -22,7 +22,7 @@ $(document).ready(function() {
 		for (var i = 0; i < data.length; i++) {
 			var image = data[i]
 			console.log(image)
-			$(".carousel-inner").append('<div>Hello</div>');
+			$(".carousel-inner").append('<div id="test">Hello</div>');
 			//$(".carousel-inner").append('<div class="item"><img src="' + image['image'] + '"><div class="carousel-caption"><h3>' + image['title'] + '</h3><p>' + image['date'] + '</p></div></div>');
 		}
 	}, function(status) {
