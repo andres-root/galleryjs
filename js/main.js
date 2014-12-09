@@ -20,8 +20,8 @@ $(document).ready(function() {
 
 	xhrGet('js/gallery.json', function(data) {
 		for (var i = 0; i < data.length; i++) {
-			var image = data[i]
-			console.log(image)
+			var image = data[i];
+			console.log(image);
 			$(".carousel-inner").append($('<div class="item">Hello</div>'));
 			//$(".carousel-inner").append('<div class="item"><img src="' + image['image'] + '"><div class="carousel-caption"><h3>' + image['title'] + '</h3><p>' + image['date'] + '</p></div></div>');
 		}
