@@ -19,7 +19,7 @@ $(document).ready(function() {
 		};
 		// Loads the images in the gallery
 		var load = function () {
-			xhrGet('js/gallery.json', function(data) {
+			this.xhrGet('js/gallery.json', function(data) {
 				var inner = $('.carousel-inner');
 				var indicators = $('.carousel-indicators');
 				for(var i = 0; i < data.length; i++) {
