@@ -1,7 +1,10 @@
 $(document).ready(function() {
-	var intelGallery = function () {
-		// Ajax request function
-		var xhrGet = function(url, successHandler, errorHandler) {
+	// Initializing function
+	var intelGallery = function(){};
+	
+	// Ajax request function
+	intelGallery.prototype = {
+		xhrGet: function(url, successHandler, errorHandler) {
 		 	var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		  	xhr.open('get', url, true);
 		  	xhr.onreadystatechange = function() {
@@ -14,11 +17,11 @@ $(document).ready(function() {
 			        	errorHandler && errorHandler(status);
 			      	}
 		    	}
-		  };
-		  xhr.send();
-		};
+	  		};
+	  		xhr.send();
+		},
 		// Loads the images in the gallery
-		var load = function (jsonUri) {
+		load: function (jsonUri) {
 			this.xhrGet(jsonUri, function(data) {
 				var inner = $('.carousel-inner');
 				var indicators = $('.carousel-indicators');
@@ -42,10 +45,6 @@ $(document).ready(function() {
 				console.log(status);
 			});
 		}
-
-		return {
-			load: load
-		}
-	};
+	}
 	intelGallery.load('js/gallery.json');
 });
