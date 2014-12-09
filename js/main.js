@@ -21,23 +21,13 @@ $(document).ready(function() {
 	xhrGet('js/gallery.json', function(data) {
 		var inner = $('.carousel-inner');
 		for(var i = 0; i < data.length; i++) {
-						// create a slide with the class .item which boostrap carousel will manage
 						var slide = $('<div class="item" data-sequence="' + i + '">');
 						
-						// if it's the first one mark it a active
 						if(i == 0) { slide.addClass('active'); }
 						
-						// create a viewport for centering the image in the container
-						var viewport = $('<div>');
-						
-						// create an lazy loading image
 						var img = $('<img src="' + data[i].image + '">');
 		 
-						// put the image in the viewport
-						viewport.append(img);
-						
-						// put the viewport in the slide
-						slide.append(viewport);
+						slide.append(img);
 						
 						// create a caption for slide
 						var caption = $('<div class="carousel-caption">');
