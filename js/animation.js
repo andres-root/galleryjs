@@ -22,7 +22,7 @@ for (var i = 0; i < columns; i++) {
 function draw() {
 	context.fillStyle = "rgba(0, 0, 0, 0.05)";
 	context.fillRect(0, 0, canvas.width, canvas.height);
-	context.fillStyle = "#0f0";
+	context.fillStyle = "rgba(0, 51, 255, 1.0)";
 	context.font = font_size + "px arial";
 
 	for (var j = 0; j < codes.length; j++) {
