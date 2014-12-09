@@ -29,3 +29,5 @@ $(document).ready(function() {
 		alert('Something went wrong.');
 	});
 });
+
+$('.carousel').carousel();
