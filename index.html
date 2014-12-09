@@ -18,46 +18,12 @@
 			<div class="container">
 				<div id="carousel" class="carousel slide" data-ride="carousel">
 				  <div class="carousel-inner" role="listbox">
-				    <div class="item active">
-				      <img src="img/image_1.jpg" alt="">
+
+				    <div class="item" ng-repeat="image in images">
+				      <img src="img/{{ image.image }}" alt="">
 				      <div class="carousel-caption">
-				        <h3>Experimental Projects at Intel</h3>
-				        <p>June 17, 2013</p>
-				      </div>
-				    </div>
-				    <div class="item">
-				      <img src="img/image_2.jpg" alt="">
-				      <div class="carousel-caption">
-				        <h3>The Keynote Address Surprised Many</h3>
-				        <p>June 18, 2013</p>
-				      </div>
-				    </div>
-				    <div class="item">
-				      <img src="img/image3.jpg" alt="">
-				      <div class="carousel-caption">
-				        <h3>Jonathan Mathers</h3>
-				        <p>July 16, 2013</p>
-				      </div>
-				    </div>
-				    <div class="item">
-				      <img src="img/image_4.jpg" alt="">
-				      <div class="carousel-caption">
-				        <h3>Next Generation Chipsets</h3>
-				        <p>August 1, 2013</p>
-				      </div>
-				    </div>
-				    <div class="item">
-				      <img src="img/image_5.jpg" alt="">
-				      <div class="carousel-caption">
-				        <h3>Operating Systems of the Future</h3>
-				        <p>September 3, 2013</p>
-				      </div>
-				    </div>
-				    <div class="item">
-				      <img src="img/image_6.jpg" alt="">
-				      <div class="carousel-caption">
-				        <h3>Sponsors of Tomorrow Booth</h3>
-				        <p>September 14, 2013</p>
+				        <h3>{{ image.title }}</h3>
+				        <p>{{ image.date }}</p>
 				      </div>
 				    </div>
 				    
