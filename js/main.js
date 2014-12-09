@@ -19,6 +19,7 @@ $(document).ready(function() {
 	};
 
 	xhrGet('js/gallery.json', function(data) {
+		var inner = this.element.find('.carousel-inner');
 		for(var i = 0; i < data.length; i++) {
 						// create a slide with the class .item which boostrap carousel will manage
 						var slide = $('<div class="item" data-sequence="' + i + '">');
@@ -65,7 +66,6 @@ $(document).ready(function() {
 					}	
 		 
 					// boot the bootstrap carousel plugin
-					this.element.carousel({pause:'hover'});
 	}, function(status) {
 		alert('Something went wrong.');
 	});
