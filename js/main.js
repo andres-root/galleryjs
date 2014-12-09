@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var intelGallery = function () {
 		// Ajax request function
-		xhrGet: function(url, successHandler, errorHandler) {
+		var xhrGet = function(url, successHandler, errorHandler) {
 		 	var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		  	xhr.open('get', url, true);
 		  	xhr.onreadystatechange = function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
 		  xhr.send();
 		};
 		// Loads the images in the gallery
-		load: function (jsonUri) {
+		var load = function (jsonUri) {
 			this.xhrGet(jsonUri, function(data) {
 				var inner = $('.carousel-inner');
 				var indicators = $('.carousel-indicators');
