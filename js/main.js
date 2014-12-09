@@ -19,19 +19,12 @@ var xhrGet = function(url, successHandler, errorHandler) {
   xhr.send();
 };
 
-    
-
 xhrGet('js/gallery.json', function(data) {
-	for(var i = 0; i < data.legth; i++) {
-	  	$( ".carousel-inner" ).append( '<div class="item active"> \
-					      <img src="img/image_1.jpg" alt=""> \
-					      <div class="carousel-caption"> \
-					        <h3>Experimental Projects at Intel</h3> \
-					        <p>June 17, 2013</p> \
-					      </div> \
-					    </div>' );
-	 }
-
+	console.log(data)
+	for (var i = 0; i < data.length; i++) {
+		image = data[i]
+		$(".carousel-inner").append($('<div class="item"><img src="' + image.image + '"><div class="carousel-caption"><h3>' + image.title + '</h3><p>' + image.date + '</p></div></div>'));
+	}
 }, function(status) {
 	alert('Something went wrong.');
 });
