@@ -40,15 +40,6 @@ $(document).ready(function() {
 						// put the slide in the .carousel-inner container
 						inner.append(slide);
 						
-						// make the viewport a container that is always the same size as the carousel
-						viewport.digitopiaContainer({fillContainer:inner})
-						
-						// make the viewport a digitopiaViewport that can enlarge images if needed
-						viewport.digitopiaViewport({ blowup: true, crop:true, align:'center', listenTo: viewport });
-						
-						// make the image lazy
-						img.digitopiaLazyImg();
-			
 						// add the dot indicator for the slide			
 						var indicator = $('<li data-target="#carousel" data-slide-to="'+i+'">');
 						if(i == 0) { indicator.addClass('active'); }
