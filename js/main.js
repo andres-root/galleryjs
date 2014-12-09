@@ -31,7 +31,7 @@ $(document).ready(function() {
 						var viewport = $('<div>');
 						
 						// create an lazy loading image
-						var img = $('<img data-lazy-src="' + data[i].src + '">');
+						var img = $('<img src="' + data[i].image + '">');
 		 
 						// put the image in the viewport
 						viewport.append(img);
