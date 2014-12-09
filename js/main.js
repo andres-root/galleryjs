@@ -23,7 +23,8 @@ $(document).ready(function() {
 		console.log(data)
 		for (var i = 0; i < data.length; i++) {
 			image = data[i]
-			$(".carousel-inner").append($('<div class="item"><img src="' + image.image + '"><div class="carousel-caption"><h3>' + image.title + '</h3><p>' + image.date + '</p></div></div>'));
+			alert(image['title'])
+			//$(".carousel-inner").append($('<div class="item"><img src="' + image.image + '"><div class="carousel-caption"><h3>' + image.title + '</h3><p>' + image.date + '</p></div></div>'));
 		}
 	}, function(status) {
 		alert('Something went wrong.');
