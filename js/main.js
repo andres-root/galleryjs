@@ -33,6 +33,8 @@ $(document).ready(function() {
 			inner.append(slide);
 			var indicator = $('<li data-target="#carousel" data-slide-to="'+i+'">');
 			if(i == 0) { indicator.addClass('active'); }
+			var thumb = $('<img src="' + data[i].thumbUrl + '">');
+			indicator.append(thumb)
 			indicators.append(indicator);
 		}	
 	}, function(status) {
