@@ -19,12 +19,12 @@ $(document).ready(function() {
 	};
 
 	xhrGet('js/gallery.json', function(data) {
-		alert(data)
-		console.log(data)
-		for (var i = 0; i < data.length; i++) {
-			image = data[i]
-			$(".carousel-inner").append($('<div class="item"><img src="' + image['image'] + '"><div class="carousel-caption"><h3>' + image['title'] + '</h3><p>' + image['date'] + '</p></div></div>'));
-		}
+		image = data[0]
+		alert(image)
+		console.log(image)
+		$(".carousel-inner").append('<div class="item"><img src="' + image['image'] + '"><div class="carousel-caption"><h3>' + image['title'] + '</h3><p>' + image['date'] + '</p></div></div>');
+		//for (var i = 0; i < data.length; i++) {
+		//}
 	}, function(status) {
 		alert('Something went wrong.');
 	});
