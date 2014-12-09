@@ -1,12 +1,12 @@
 var canvas = document.getElementById("canvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 var context = canvas.getContext("2d");
 var font_size = 10;
 var columns = canvas.width;
 var codes = [];
 var matrixCode = "ANDRESFELIPELUJANRODRIGUEZ";
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 matrixCode = matrixCode.split("");
 
@@ -17,6 +17,7 @@ for (var i = 0; i < columns; i++) {
 function draw() {
 	context.fillStyle = "rgba(0, 0, 0, 0.05)";
 	context.fillRect(0, 0, canvas.width, canvas.height);
+	context.fillStyle = "#0f0";
 	context.font = font_size + "px arial";
 
 	for (var j = 0; j < codes.length; j++) {
