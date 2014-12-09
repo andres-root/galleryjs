@@ -22,8 +22,7 @@ var xhrGet = function(url, successHandler, errorHandler) {
     
 
 xhrGet('js/gallery.json', function(data) {
-	var images = JSON.parse(data);
-	for(var i = 0; i < images.legth; i++) {
+	for(var i = 0; i < data.legth; i++) {
 	  	$( ".carousel-inner" ).append( '<div class="item active"> \
 					      <img src="img/image_1.jpg" alt=""> \
 					      <div class="carousel-caption"> \
