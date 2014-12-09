@@ -1,12 +1,26 @@
-function xhrGet(reqUri, callback) {
-	var xhr = new XMLHttpRequest();
-	xhr.open("GET", reqUri, true);
-	xhr.onload = callback;
-	xhr.send();
-}
+var xhrGet = function(url, successHandler, errorHandler) {
+ 	var xhr = typeof XMLHttpRequest != 'undefined'
+    	? new XMLHttpRequest()
+    	: new ActiveXObject('Microsoft.XMLHTTP');
+  	xhr.open('get', url, true);
+  	xhr.onreadystatechange = function() {
+    	var status;
+    	var data;
+    	if (xhr.readyState == 4) {
+	      	status = xhr.status;
+	      	if (status == 200) {
+		        data = JSON.parse(xhr.responseText);
+	    	    successHandler && successHandler(data);
+	      	} else {
+	        	errorHandler && errorHandler(status);
+	      	}
+    	}
+  };
+  xhr.send();
+};
 
-function load (data) {
-    var response = JSON.parse(data.responseText);
-    console.log(response);
-}
-xhrGet('gallery_json.js', load);
+xhrGet('js/gallery.json', function(data) {
+	console.log(data);
+}, function(status) {
+	alert('Something went wrong.');
+});
