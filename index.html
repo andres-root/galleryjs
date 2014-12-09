@@ -8,21 +8,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript">
-		function xhrGet(url, callback) {
+		function xhrGet(url) {
 			var xhr = new XMLHttpRequest();
 			xhr.open("GET", url, true);
-			xhr.onload = callback;
-			xhr.send();
-		}
-
-		function load() {
-			xhrGet('js/gallery.json', function (data) {
-			    var response = JSON.parse(data.responseText);
+			xhr.onload = function (data) {
+				var response = JSON.parse(data.responseText);
 			    console.log(response);
 			    alert(response);
-			});
+			}
+			xhr.send();
 		}
-		load();
+		xhrGet('js/gallery.json');
 	</script>
 	</head>
 <body>
