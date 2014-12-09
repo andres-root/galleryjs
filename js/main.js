@@ -21,6 +21,7 @@ $(document).ready(function() {
 	};
 
 	xhrGet('js/gallery.json', function(data) {
+		alert(data)
 		console.log(data)
 		for (var i = 0; i < data.length; i++) {
 			image = data[i]
