@@ -43,5 +43,6 @@ $(document).ready(function() {
 			console.log(status);
 		});
 	};
-	intelGallery.load('js/gallery.json');
+	gallery = new intelGallery()
+	gallery.load('js/gallery.json');
 });
