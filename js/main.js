@@ -42,6 +42,6 @@ $(document).ready(function() {
 				console.log(status);
 			});
 		}
-	});
+	};
 	intelGallery.load('js/gallery.json')
 });
