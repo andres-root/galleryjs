@@ -38,7 +38,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background: url('../img/bg.jpg');
-	background-size: cover;
+	background-size: 100%;
 	color: #fff;
 }
 
@@ -124,5 +124,4 @@ canvas {
 	position: fixed;
 	left:0;
     top:0;
-    z-index:-1;
 }
