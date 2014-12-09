@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	var intelGallery = (function () {
+	var intelGallery = function () {
 		// Ajax request function
-		var xhrGet = function(url, successHandler, errorHandler) {
+		xhrGet: function(url, successHandler, errorHandler) {
 		 	var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 		  	xhr.open('get', url, true);
 		  	xhr.onreadystatechange = function() {
@@ -18,8 +18,8 @@ $(document).ready(function() {
 		  xhr.send();
 		};
 		// Loads the images in the gallery
-		var load = function () {
-			this.xhrGet('js/gallery.json', function(data) {
+		load: function (jsonUri) {
+			this.xhrGet(jsonUri, function(data) {
 				var inner = $('.carousel-inner');
 				var indicators = $('.carousel-indicators');
 				for(var i = 0; i < data.length; i++) {
@@ -42,5 +42,6 @@ $(document).ready(function() {
 				console.log(status);
 			});
 		}
-	}());
+	});
+	intelGallery.load('js/gallery.json')
 });
